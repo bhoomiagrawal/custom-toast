@@ -8,12 +8,12 @@ const ToastSection = () => {
   const { toasts, addToast, removeToast } = useToast();
 
   const showToast = (type, position) => () => {
-    addToast(`This is a ${type} message!`, type, position);
+    addToast(`${type} toast notification`, type, position);
   };
 
   return (
     <div className="min-h-screen flex items-start justify-start bg-gray-200 p-8">
-      <div className="w-full max-w-xs bg-white p-6 shadow-md rounded-lg space-y-4  ">
+      <div className="w-full max-w-xs bg-white p-6 shadow-md rounded-lg space-y-4 mt-auto mb-auto ">
         <div className="flex flex-col space-y-4">
           <button
             onClick={showToast("success", "top-right")}
@@ -23,19 +23,19 @@ const ToastSection = () => {
           </button>
           <button
             onClick={showToast("warning", "top-left")}
-            className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 text-sm md:text-base lg:text-base"
+            className="bg-yellow-500 text-white px-2 py-2 rounded hover:bg-yellow-600 text-sm md:text-base lg:text-base"
           >
             Warning (Top Left)
           </button>
           <button
             onClick={showToast("error", "top-center")}
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 text-sm md:text-base lg:text-base"
+            className="bg-red-500 text-white px-2 py-2 rounded hover:bg-red-600 text-sm md:text-base lg:text-base"
           >
             Error (Top Center)
           </button>
           <button
             onClick={showToast("info", "bottom-center")}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm md:text-base lg:text-base"
+            className="bg-blue-500 text-white px-2 py-2 rounded hover:bg-blue-600 text-sm md:text-base lg:text-base"
           >
             Info (Bottom Center)
           </button>

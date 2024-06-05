@@ -6,8 +6,8 @@ import Toast from "./Toast";
 const positionClasses = {
   "top-left": "top-4 left-4",
   "top-right": "top-4 right-4",
-  "top-center": "top-4 left-1/2 transform -translate-x-1/2",
-  "bottom-center": "bottom-4 left-1/2 transform -translate-x-1/2",
+  "top-center": "top-4 left-1/2 transform -translate-x-1/2 min-w-72",
+  "bottom-center": "bottom-4 left-1/2 transform -translate-x-1/2 min-w-72",
 };
 
 const ToastContainer = ({ toasts, removeToast }) => {
