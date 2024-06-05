@@ -31,3 +31,53 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes underline {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.animate-slide-in-out {
+  animation: slideIn 0.5s, slideOut 0.5s 3.5s;
+}
+
+.animate-underline {
+  animation: underline 4s linear forwards;
+}
+
+
+
+
+
+
+
+
+
